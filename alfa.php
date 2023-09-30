@@ -39,3 +39,17 @@ if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 		}
 	);
 }
+
+/**
+ * Define the plugin version constant.
+ * It will be used throughout the plugin.
+ */
+
+if ( ! defined( 'ALPHA_PLUGIN_VERSION' ) ) {
+	define( 'ALPHA_PLUGIN_VERSION', '1.0.0' );
+}
+
+// Define constant that provides full path and name of the plugin's main file.
+if ( ! defined( 'ALPHA_PLUGIN_FILE' ) ) {
+	define( 'ALPHA_PLUGIN_FILE', __FILE__ );
+}
