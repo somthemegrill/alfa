@@ -1,0 +1,24 @@
+{
+  "name": "root/alpha",
+  "description": "Alpha Form Plugin For WordPress.",
+  "homepage": "https://themegrill.com/",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0-or-later",
+  "autoload": {
+    "psr-4": {
+      "Alpha\\": "includes/"
+    }
+  },
+  "require": {
+    "composer/installers": "~2.0.0"
+  },
+  "require-dev": {
+    "wp-cli/i18n-command": "2.2.9"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "composer/installers": true
+    }
+  }
+}
