@@ -15,3 +15,27 @@
  *
  * @package Alpha
  */
+
+/* It prevents public user to directly access your .php files through URL.
+If your file contains some I/O operations it can eventually be triggered (by an attacker)
+and this might cause unexpected behavior.
+*/
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
+	require_once dirname( __FILE__ ) . '/vendor/autoload.php';
+} else {
+	add_action(
+		'admin_notices',
+		function () {
+			?>
+			<div class="notice notice-error">
+				<p><?php esc_html_e( 'Please run composer install in your plugin directory.', 'alpha' ); ?></p>
+			</div>
+			<?php
+		}
+	);
+}
