@@ -87,9 +87,13 @@ if ( ! class_exists( 'Install' ) ) {
 				$charset_collate = $collate;
 				$sql             = "CREATE TABLE IF NOT EXISTS $table_name (
 					id mediumint(9) NOT NULL AUTO_INCREMENT,
-					name varchar(50) NOT NULL,
+					fullname varchar(50) NOT NULL,
 					email varchar(50) NOT NULL,
 					phone varchar(50) NOT NULL,
+					gender varchar(50) NOT NULL,
+					user_bio text NOT NULL,
+					employment_status varchar(50) NOT NULL,
+					picture varchar(50) NOT NULL,
 					created_at datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
 					PRIMARY KEY  (id)
 				) $charset_collate;";
