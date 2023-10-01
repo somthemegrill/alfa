@@ -73,7 +73,7 @@ class Admin {
 
 	public function alpha_setting_page() {
 		ob_start();
-		echo 'Hello World';
+		echo '<h1>Alpha Setting</h1>';
 		$contents = ob_get_clean();
 		echo $contents;
 	}

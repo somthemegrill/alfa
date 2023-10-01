@@ -56,9 +56,13 @@ if ( ! class_exists( 'Alpha' ) ) :
 
 		private function __construct() {
 			require 'Core.php';
+			// Check if the plugin is compatible with the current version of WordPress and PHP.
 			add_action( 'admin_notices', array( $this, 'alpha_check_compatibility' ) );
+			// Plugin activation and deactivation hooks.
 			add_filter( 'plugin_action_links_' . plugin_basename( ALPHA_PLUGIN_FILE ), array( $this, 'plugin_action_links' ) );
 			add_action( 'init', array( $this, 'includes' ) );
+
+			// Register activation hook.
 			register_activation_hook( __FILE__, array( 'Install', 'install' ) );
 		}
 
@@ -69,6 +73,7 @@ if ( ! class_exists( 'Alpha' ) ) :
 		public function includes() {
 			$this->install = new Install();
 
+			// Check if is admin or not and load correct class
 			if ( $this->admin->is_admin() ) {
 				$this->admin = new Admin();
 			}
