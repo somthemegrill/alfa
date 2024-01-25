@@ -40,6 +40,8 @@ if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 	);
 }
 
+use Alpha\Alpha;
+
 /**
  * Define the plugin version constant.
  * It will be used throughout the plugin.
@@ -53,3 +55,9 @@ if ( ! defined( 'ALPHA_PLUGIN_VERSION' ) ) {
 if ( ! defined( 'ALPHA_PLUGIN_FILE' ) ) {
 	define( 'ALPHA_PLUGIN_FILE', __FILE__ );
 }
+
+function alpha() {
+    return Alpha::get_instance();
+}
+
+alpha();

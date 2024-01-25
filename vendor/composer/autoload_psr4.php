@@ -14,5 +14,6 @@ return array(
     'Gettext\\Languages\\' => array($vendorDir . '/gettext/languages/src'),
     'Gettext\\' => array($vendorDir . '/gettext/gettext/src'),
     'Composer\\Installers\\' => array($vendorDir . '/composer/installers/src/Composer/Installers'),
+    'Alpha\\Admin;\\' => array($baseDir . '/includes/Admin'),
     'Alpha\\' => array($baseDir . '/includes'),
 );

@@ -2,11 +2,13 @@
   "name": "root/alpha",
   "description": "Alpha Form Plugin For WordPress.",
   "homepage": "https://themegrill.com/",
+  "version": "1.0.0",
   "type": "wordpress-plugin",
   "license": "GPL-3.0-or-later",
   "autoload": {
     "psr-4": {
-      "Alpha\\": "includes/"
+      "Alpha\\": "includes/",
+      "Alpha\\Admin;\\": "includes/Admin/"
     }
   },
   "require": {
@@ -20,5 +22,10 @@
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "composer/installers": true
     }
+  },
+  "scripts": {
+    "make-pot": [
+      "wp i18n make-pot ./ ./languages/alpha.pot --domain=alpha"
+    ]
   }
 }

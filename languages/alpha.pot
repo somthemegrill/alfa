@@ -1,0 +1,53 @@
+# Copyright (C) 2024 Som Shrestha
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: Alpha 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/alpha\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-01-22T16:58:42+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: alpha\n"
+
+#. Plugin Name of the plugin
+#: includes/Admin/Admin.php:45
+#: includes/Admin/Admin.php:46
+msgid "Alpha"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wprdpress.org/plugins"
+msgstr ""
+
+#. Description of the plugin
+msgid "Alpha Plugin For CRUD operation WordPress."
+msgstr ""
+
+#. Author of the plugin
+msgid "Som Shrestha"
+msgstr ""
+
+#: alfa.php:36
+msgid "Please run composer install in your plugin directory."
+msgstr ""
+
+#: includes/Alpha.php:108
+msgid "View Alpha Settings"
+msgstr ""
+
+#: includes/Alpha.php:108
+msgid "Settings"
+msgstr ""
+
+#: includes/Core.php:25
+msgid "Alpha requires PHP version 5.6+, plugin is currently NOT RUNNING."
+msgstr ""
+
+#: includes/Core.php:29
+msgid "Alpha requires WordPress version 4.7+, plugin is currently NOT RUNNING."
+msgstr ""
