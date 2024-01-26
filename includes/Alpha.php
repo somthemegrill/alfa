@@ -62,24 +62,25 @@ if ( ! class_exists( 'Alpha' ) ) :
 			add_action( 'admin_notices', 'alpha_check_compatibility' );
 			// Plugin activation and deactivation hooks.
 			add_filter( 'plugin_action_links_' . plugin_basename( ALPHA_PLUGIN_FILE ), array( $this, 'plugin_action_links' ) );
-//			add_action( 'init', array( $this, 'includes' ) );
+			add_action( 'init', array( $this, 'includes' ) );
 
 			// Register activation hook.
-			register_activation_hook( __FILE__, array( 'Install', 'install' ) );
+//			register_activation_hook( __FILE__, array( 'Install', 'install' ) );
 		}
 
 		/**
 		 *  Include the files.
 		 */
 
-//		public function includes() {
-//			$this->install = new Install();
-//
-//			// Check if is admin or not and load correct class
-//			if ( $this->admin->is_admin() ) {
-//				$this->admin = new Admin();
-//			}
-//		}
+		public function includes() {
+
+			$this->install = new Install();
+
+			// Check if is admin or not and load correct class
+			if ( $this->is_admin() ) {
+				$this->admin = new Admin();
+			}
+		}
 
 		/*
 		 * Check if is admin or not and load correct class

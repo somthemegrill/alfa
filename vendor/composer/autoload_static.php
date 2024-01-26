@@ -43,7 +43,6 @@ class ComposerStaticInit3b4e8a9edeb19435a57b3ae053166bf0
         ),
         'A' => 
         array (
-            'Alpha\\Admin;\\' => 13,
             'Alpha\\' => 6,
         ),
     );
@@ -80,10 +79,6 @@ class ComposerStaticInit3b4e8a9edeb19435a57b3ae053166bf0
         'Composer\\Installers\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
-        ),
-        'Alpha\\Admin;\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/includes/Admin',
         ),
         'Alpha\\' => 
         array (
